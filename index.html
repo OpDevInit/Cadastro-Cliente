@@ -17,56 +17,99 @@
     </header>
 
     <main>
-        <div class="container shadow rounded  py-5 px-4">
+        <div class="container shadow rounded my-auto py-5 px-4">
 
             <!--Form-->
             <section>
-                <div class="row">
-                    <div class="mb-3 col-6">
-                        <label for="formGroupExampleInput" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="inputName">
+                <div>
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                            <label for="formGroupExampleInput" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="inputName">
+                        </div>
+                        <div class="mb-3 col-6">
+                            <label for="formGroupExampleInput2" class="form-label">Sobrenome</label>
+                            <input type="text" class="form-control" id="inputLastName">
+                        </div>
                     </div>
-                    <div class="mb-3 col-6">
-                        <label for="formGroupExampleInput2" class="form-label">Sobrenome</label>
-                        <input type="text" class="form-control" id="inputLastName">
+                    <div class="mb-3 col-3">
+                        <label for="formGroupExampleInput2" class="form-label">Pesquise: pelo CEP:</label>
+                        <input type="text" class="form-control" id="inputSearch">
                     </div>
-                </div>
-                <div class="mb-3 col-3">
-                    <label for="formGroupExampleInput2" class="form-label">Pesquise: pelo CEP:</label>
-                    <input type="text" class="form-control" id="inputSearch">
-                </div>
-                <div class="row">
-                    <div class="mb-3 col-10">
-                        <label for="formGroupExampleInput2" class="form-label">Endereço:</label>
-                        <input class="form-control" type="text" aria-label="Disabled input example" disabled readonly>
-                    </div>
-                    <div class="mb-3 col-2">
-                        <label for="formGroupExampleInput2" class="form-label">Número:</label>
-                        <input class="form-control" type="text" aria-label="Disabled input example" disabled readonly>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="mb-3 col-6">
-                        <label for="formGroupExampleInput2" class="form-label">Bairro:</label>
-                        <input class="form-control" type="text" aria-label="Disabled input example" disabled readonly>
-                    </div>
-                    <div class="mb-3 col-6">
-                        <label for="formGroupExampleInput2" class="form-label">Cidade:</label>
-                        <input class="form-control" type="text" aria-label="Disabled input example" disabled readonly>
-                    </div>
-                </div>
-                <div class="mb-3 col-2">
-                    <label for="formGroupExampleInput2" class="form-label">Estado:</label>
-                    <input class="form-control" type="text" aria-label="Disabled input example" disabled readonly>
                 </div>
             </section>
 
             <!--Auto-Complete Form-->
             <section>
+                <div class="mb-5">
+                    <div class="row">
+                        <div class="mb-3 col-10">
+                            <label for="formGroupExampleInput2" class="form-label">Endereço:</label>
+                            <input class="form-control" type="text" aria-label="Disabled input example" disabled
+                                readonly>
+                        </div>
+                        <div class="mb-3 col-2">
+                            <label for="formGroupExampleInput2" class="form-label">Número:</label>
+                            <input class="form-control" type="text" aria-label="Disabled input example" disabled
+                                readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                            <label for="formGroupExampleInput2" class="form-label">Bairro:</label>
+                            <input class="form-control" type="text" aria-label="Disabled input example" disabled
+                                readonly>
+                        </div>
+                        <div class="mb-3 col-6">
+                            <label for="formGroupExampleInput2" class="form-label">Cidade:</label>
+                            <input class="form-control" type="text" aria-label="Disabled input example" disabled
+                                readonly>
+                        </div>
+                    </div>
+                    <div class="mb-2 col-2">
+                        <label for="formGroupExampleInput2" class="form-label">Estado:</label>
+                        <input class="form-control" type="text" aria-label="Disabled input example" disabled readonly>
+                    </div>
+                </div>
             </section>
 
             <!--Table-->
             <section>
+                <div class="pt-5">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome Completo</th>
+                                <th scope="col">Endereço</th>
+                                <th scope="col">CEP</th>
+                                <th scope="col">Bairro</th>
+                                <th scope="col">cidade</th>
+                                <th scope="col">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Jhonata Ferreira</td>
+                                <td>Rua Canindé, 400</td>
+                                <td>03246-070</td>
+                                <td>São Calouro</td>
+                                <td>Cotia</td>
+                                <td>RJ</td>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Ricardo Campos</td>
+                                <td>Rua Raimundos,1338</td>
+                                <td>26349-027</td>
+                                <td>São Tomé</td>
+                                <td>Vila Lobos</td>
+                                <td>BA</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
             </section>
 
         </div>
