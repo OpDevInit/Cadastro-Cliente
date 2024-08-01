@@ -11,16 +11,31 @@
 
 <body>
     <header class="text-center">
-        <div class="my-3 fs-1">
+        <div class="my-5 fs-1">
             Cadastro Clientes:
         </div>
     </header>
 
     <main>
-        <div class="container shadow rounded  bg-primary">
+        <div class="container shadow rounded  py-5 px-4">
 
             <!--Form-->
             <section>
+                <div class="row">
+                    <div class="mb-3 col-6">
+                        <label for="formGroupExampleInput" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="inputName">
+                      </div>
+                      <div class="mb-3 col-6">
+                        <label for="formGroupExampleInput2" class="form-label">Sobrenome</label>
+                        <input type="text" class="form-control" id="inputLastName" >
+                      </div>
+                </div>
+                <div class="mb-3 col-3">
+                    <label for="formGroupExampleInput2" class="form-label">Pesquisa pelo CEP</label>
+                    <input type="text" class="form-control" id="inputSearch" >
+                </div>
+
             </section>
 
             <!--Auto-Complete Form-->
