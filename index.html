@@ -33,8 +33,8 @@
                         </div>
                     </div>
                     <div class="mb-3 col-3">
-                        <label for="formGroupExampleInput2" class="form-label">Pesquise: pelo CEP:</label>
-                        <input type="text" class="form-control" id="inputSearch">
+                        <label for="inputSearch" class="form-label">Pesquise: pelo CEP:</label>
+                        <input type="text" onblur="get_CEP_Data()" class="form-control" id="inputSearch">
                     </div>
                 </div>
             </section>
@@ -44,31 +44,34 @@
                 <div class="mb-5">
                     <div class="row">
                         <div class="mb-3 col-10">
-                            <label for="formGroupExampleInput2" class="form-label">Endereço:</label>
-                            <input class="form-control" type="text" aria-label="Disabled input example" disabled
+                            <label for="inputAddress" class="form-label">Endereço:</label>
+                            <input class="form-control" id="inputAddress" type="text" aria-label="Disabled input example" disabled
                                 readonly>
                         </div>
                         <div class="mb-3 col-2">
                             <label for="formGroupExampleInput2" class="form-label">Número:</label>
-                            <input class="form-control" type="text" aria-label="Disabled input example" disabled
+                            <input class="form-control" id= "numero"type="text"  aria-label="Disabled input example" disabled
                                 readonly>
                         </div>
                     </div>
                     <div class="row">
                         <div class="mb-3 col-6">
-                            <label for="formGroupExampleInput2" class="form-label">Bairro:</label>
-                            <input class="form-control" type="text" aria-label="Disabled input example" disabled
+                            <label for="inputNeighborhood" class="form-label">Bairro:</label>
+                            <input class="form-control" id="inputNeighborhood" type="text" aria-label="Disabled input example" disabled
                                 readonly>
                         </div>
                         <div class="mb-3 col-6">
-                            <label for="formGroupExampleInput2" class="form-label">Cidade:</label>
-                            <input class="form-control" type="text" aria-label="Disabled input example" disabled
+                            <label for="inputCity" class="form-label">Cidade:</label>
+                            <input class="form-control" id="inputCity" type="text" aria-label="Disabled input example" disabled
                                 readonly>
                         </div>
                     </div>
                     <div class="mb-2 col-2">
-                        <label for="formGroupExampleInput2" class="form-label">Estado:</label>
-                        <input class="form-control" type="text" aria-label="Disabled input example" disabled readonly>
+                        <label for="inputState" class="form-label">Estado:</label>
+                        <input class="form-control"  id="inputState" type="text" aria-label="Disabled input example" disabled readonly>
+                    </div>
+                    <div class="text-center">
+                        <button type="button" onclick="save()" class="btn btn-primary">Salvar</button>
                     </div>
                 </div>
             </section>
@@ -116,6 +119,10 @@
 
 
     </main>
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="scripts/jquery.mask.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script> $("#inputSearch").mask("99999-000"); </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
