@@ -22,64 +22,71 @@
             <!--Form-->
             <section>
                 <div>
-                    <div class="row">
-                        <div class="mb-3 col-6">
-                            <label for="formGroupExampleInput" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="inputName">
+                    <form id="form" onsubmit="save(); return false;">
+                        <div>
+                            <div class="row">
+                                <div class="mb-3 col-6">
+                                    <label for="formGroupExampleInput" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="inputName" required>
+                                </div>
+                                <div class="mb-3 col-6">
+                                    <label for="formGroupExampleInput2" class="form-label">Sobrenome</label>
+                                    <input type="text" class="form-control" id="inputLastName" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="mb-3 col-3">
+                                    <label for="inputSearch" class="form-label">Pesquise: pelo CEP:</label>
+                                    <input type="tel" onblur="get_CEP_Data()" class="form-control" id="inputSearch"
+                                        required>
+                                </div>
+                                <div class="col align-self-end" id="errorCEP">
+                                </div>
+                            </div>
                         </div>
-                        <div class="mb-3 col-6">
-                            <label for="formGroupExampleInput2" class="form-label">Sobrenome</label>
-                            <input type="text" class="form-control" id="inputLastName">
-                        </div>
-                    </div>
-                    <div class="mb-3 col-3">
-                        <label for="inputSearch" class="form-label">Pesquise: pelo CEP:</label>
-                        <input type="text" onblur="get_CEP_Data()" class="form-control" id="inputSearch">
-                    </div>
-                </div>
-            </section>
+                        <!--Auto-Complete Form-->
 
-            <!--Auto-Complete Form-->
-            <section>
-                <div class="mb-5">
-                    <div class="row">
-                        <div class="mb-3 col-10">
-                            <label for="inputAddress" class="form-label">Endereço:</label>
-                            <input class="form-control" id="inputAddress" type="text" aria-label="Disabled input example" disabled
-                                readonly>
+                        <div class="row">
+                            <div class="mb-3 col-10">
+                                <label for="inputAddress" class="form-label">Endereço:</label>
+                                <input class="form-control" id="inputAddress" type="text"
+                                    aria-label="Disabled input example" disabled readonly>
+                            </div>
+                            <div class="mb-3 col-2">
+                                <label for="formGroupExampleInput2" class="form-label">Número:</label>
+                                <input class="form-control" id="number" type="tel" aria-label="Disabled input example"
+                                    disabled readonly required>
+                            </div>
                         </div>
-                        <div class="mb-3 col-2">
-                            <label for="formGroupExampleInput2" class="form-label">Número:</label>
-                            <input class="form-control" id= "numero"type="text"  aria-label="Disabled input example" disabled
-                                readonly>
+                        <div class="row">
+                            <div class="mb-3 col-6">
+                                <label for="inputNeighborhood" class="form-label">Bairro:</label>
+                                <input class="form-control" id="inputNeighborhood" type="text"
+                                    aria-label="Disabled input example" disabled readonly>
+                            </div>
+                            <div class="mb-3 col-6">
+                                <label for="inputCity" class="form-label">Cidade:</label>
+                                <input class="form-control" id="inputCity" type="text"
+                                    aria-label="Disabled input example" disabled readonly>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="mb-3 col-6">
-                            <label for="inputNeighborhood" class="form-label">Bairro:</label>
-                            <input class="form-control" id="inputNeighborhood" type="text" aria-label="Disabled input example" disabled
-                                readonly>
+                        <div class="mb-2 col-2">
+                            <label for="inputState" class="form-label">Estado:</label>
+                            <input class="form-control" id="inputState" type="text" aria-label="Disabled input example"
+                                disabled readonly>
                         </div>
-                        <div class="mb-3 col-6">
-                            <label for="inputCity" class="form-label">Cidade:</label>
-                            <input class="form-control" id="inputCity" type="text" aria-label="Disabled input example" disabled
-                                readonly>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Salvar</button>
                         </div>
-                    </div>
-                    <div class="mb-2 col-2">
-                        <label for="inputState" class="form-label">Estado:</label>
-                        <input class="form-control"  id="inputState" type="text" aria-label="Disabled input example" disabled readonly>
-                    </div>
-                    <div class="text-center">
-                        <button type="button" onclick="save()" class="btn btn-primary">Salvar</button>
-                    </div>
+                    </form>
+
                 </div>
             </section>
 
             <!--Table-->
             <section>
                 <div class="pt-5">
-                    <table class="table">
+                    <table class="table" id="table">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -92,24 +99,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Jhonata Ferreira</td>
-                                <td>Rua Canindé, 400</td>
-                                <td>03246-070</td>
-                                <td>São Calouro</td>
-                                <td>Cotia</td>
-                                <td>RJ</td>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Ricardo Campos</td>
-                                <td>Rua Raimundos,1338</td>
-                                <td>26349-027</td>
-                                <td>São Tomé</td>
-                                <td>Vila Lobos</td>
-                                <td>BA</td>
-                            </tr>
-                            
+
+
                         </tbody>
                     </table>
                 </div>
